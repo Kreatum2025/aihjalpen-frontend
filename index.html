@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Google Tag (prod-guarded) -->
+<script>
+  (function () {
+    var host = location.hostname;
+    var isProd = host === 'aihjalpen.se' || host === 'www.aihjalpen.se';
+    var isLocal = host === 'localhost' || host.endsWith('.local');
+    var isAzure = host.endsWith('.azurestaticapps.net');
+    if (!(isProd || isLocal || isAzure)) return; // blockera spårning utanför prod/dev/azure
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+
+    // Consent Mode (grundinställning)
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'granted',
+      wait_for_update: 500
+    });
+
+    // Ladda Google Tag
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=GT-K5Q7RD3K';
+    document.head.appendChild(s);
+
+    gtag('js', new Date());
+    gtag('config', 'GT-K5Q7RD3K');
+  })();
+</script>
+
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="https://aihjalpen.se/sitemap.xml">
+        <!-- Standard SEO -->
+        <title>AI-assistent för kundtjänst & bokning | AI-hjälpen</title>
+        <meta name="description" content="AI-assistenter för kundtjänst och leads – GDPR-säkra, enkla och anpassade för företag. Experter på AEO-optimering och synlighet i AI-sök.">
+        <meta name="keywords" content="AI-assistent, AI chatbot, digital assistent, AI automation, digitalisering">
+        <meta name="author" content="Kreatum AI">
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="sv">
+
+        <!-- Canonical -->
+        <link rel="canonical" href="https://aihjalpen.se/">
+
+        <!-- Viewport och teckenkodning flyttat till toppen av head -->
+
+        <!-- Open Graph (Facebook, LinkedIn etc) -->
+        <meta property="og:title" content="AI-hjälpen – AI-assistenter för hemsidor & företag">
+        <meta property="og:description" content="Få en smart AI-assistent till din hemsida som bokar, säljer och guidar – utan FAQ-bottar.">
+        <meta property="og:image" content="https://aihjalpen.se/ai-hjalpen-social-logo.png">
+        <meta property="og:url" content="https://aihjalpen.se/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="AI-hjälpen">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="AI-hjälpen – Skapa smartare dialog med dina kunder">
+        <meta name="twitter:description" content="AI-assistenter och AI-agenter som gör jobbet – utan krångel.">
+        <meta name="twitter:image" content="https://aihjalpen.se/ai-hjalpen-social-logo.png">
+
+        <!-- Färger för mobila enheter -->
+        <meta name="theme-color" content="#f27d38">
+        <meta name="msapplication-TileColor" content="#f27d38">
+        <meta name="color-scheme" content="light">
+        <meta name="supported-color-schemes" content="light">
+
+
+
+
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "AI-hjälpen",
+          "alternateName": "Kreatum AI",
+          "url": "https://aihjalpen.se/",
+          "logo": "https://aihjalpen.se/ai-hjalpen-logo.svg",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+46761675292",
+            "contactType": "customer support",
+            "areaServed": "SE",
+            "availableLanguage": ["Swedish", "English"]
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/ai-hjalpen"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Stockholm",
+            "addressCountry": "SE"
+          },
+          "founder": {
+            "@type": "Organization",
+            "name": "AI-hjälpen"
+          },
+          "email": "kontakt@aihjalpen.se",
+          "inLanguage": "sv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "AI-hjälpen – Smart AI-assistent",
+          "description": "Från 1 990 kr/mån. AI-assistent som guidar besökare, bokar möten och svarar på vanliga frågor direkt på hemsidan.",
+          "brand": {
+            "@type": "Brand",
+            "name": "AI-hjälpen"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://aihjalpen.se/",
+            "price": "1990",
+            "priceCurrency": "SEK",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+        </script>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+
+
+        <!-- LCP OPTIMIZATION: Preconnect för Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- LCP OPTIMIZATION: Preload för hero-bakgrundsbild (AVIF först, WebP fallback) -->
+        <link rel="preload" as="image" href="/ai-background.avif" type="image/avif" fetchpriority="high">
+        <link rel="preload" as="image" href="/ai-background.webp" type="image/webp" fetchpriority="high">
+        <!-- 1) CRITICAL CSS: Inline above-the-fold styles (2.8KB) -->
+        <style id="critical-css">*,::after,::before{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#2d3748;background:linear-gradient(135deg,#fdf8f2 0,#fff 100%);min-height:100vh}.container{max-width:1200px;margin:0 auto;padding:0 1rem}.header{position:sticky;top:0;background:linear-gradient(135deg,rgba(255,255,255,.98) 0,rgba(253,248,242,.98) 100%);border-bottom:1px solid rgba(255,107,71,.1);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.08)}.header .container{display:flex;align-items:center;justify-content:space-between;min-height:70px}.header-content{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;padding:1rem 0;width:100%}.logo-container{display:flex;align-items:center}.logo{height:40px;width:auto}.desktop-nav{display:flex;align-items:center;gap:1.2rem}.nav-link{text-decoration:none;color:#4a5568;font-weight:500;font-size:.9rem;padding:.5rem 0;transition:color .2s ease}.nav-link:hover{color:#ff6b47}.demo-btn{padding:.8rem 1.8rem;border-radius:30px;font-weight:600;background:linear-gradient(135deg,#00d4aa 0,#00c29a 100%);color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;box-shadow:0 4px 12px rgba(0,0,0,.1)}.hero{padding:6rem 0 8rem;text-align:center;position:relative;overflow:hidden}.hero-content{max-width:800px;margin:0 auto;position:relative;z-index:1}.hero-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;margin-bottom:2rem;background:linear-gradient(135deg,#1a2a3c 0,#ff6b47 50%,#ff5733 100%);background-size:200% 200%;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1;letter-spacing:-.03em}.hero-subtitle{font-size:clamp(1.2rem,3vw,1.6rem);margin-bottom:2rem;color:#ff6b47;font-weight:600;font-style:italic;line-height:1.4}.hero-description{font-size:clamp(1rem,2.2vw,1.25rem);margin-bottom:3rem;color:#2d3748;line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto}.hero-actions{margin-bottom:2rem}.btn{padding:1.2rem 2.5rem;border-radius:50px;font-weight:700;text-decoration:none;border:none;cursor:pointer;display:inline-block;font-size:1.1rem;position:relative;overflow:hidden}.btn-primary{background:linear-gradient(135deg,#b8421c 0,#a83912 100%);color:#fff;box-shadow:0 8px 25px rgba(204,74,31,.4);min-height:56px}.btn-outline{background:transparent;color:#ff6b47;border:2px solid #ff6b47}@media (max-width:768px){.container{padding:0 1rem}.hero{padding:3rem 0 4rem}.hero-title{font-size:clamp(1.8rem,8vw,2.5rem)}}</style>
+
+        <!-- 2) ASYNC FULL CSS: Preload + onload pattern (render non-blocking) -->
+        <link rel="preload" as="style" href="/main.min.css" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/main.min.css"></noscript>
+        <link rel="preload" as="style" href="/css/konrad.min.css" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/css/konrad.min.css"></noscript>
+
+        <!-- Google Fonts -->
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "AI-hjälpen",
+            "url": "https://aihjalpen.se/",
+            "description": "AI-hjälpen är en svensk tjänst som skapar smarta AI-assistenter för små och medelstora företag. Byggd för GDPR, enkelt och skräddarsytt.",
+            "inLanguage": "sv",
+            "publisher": {
+                "@type": "Organization",
+                "name": "AI-hjälpen",
+                "url": "https://aihjalpen.se"
+            }
+        }
+        </script>
+
+    </head>
+    <body class="page-home homepage">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <!-- Logo Container -->
+                    <div class="logo-container">
+                        <a href="/" class="logo-link">
+
+                            <img src="/ai-hjalpen-logo.svg" alt="AI-hjälpen logotyp" class="logo" loading="lazy" sizes="(max-width: 768px) 120px, 150px">
+                        </a>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="desktop-nav">
+                        <a href="/om-oss.html" class="nav-link">Om AI-hjälpen</a>
+                        <div class="nav-dropdown">
+                            <a href="#tjanster" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dd-services">Våra AI-assistenter</a>
+                            <div id="nav-dd-services" class="dropdown-menu">
+                                <a href="ai-assistent-kundtjanst.html" class="dropdown-item">AI-hjälpen Nivå 1 (Enkelt & trygg start)</a>
+                                <a href="ai-assistent-kundtjanst-bokning.html" class="dropdown-item">AI-hjälpen Nivå 2 (Avancerad & kraftfull)</a>
+                                <a href="ai-assistenter.html" class="dropdown-item">Jämför våra lösningar</a>
+                                <a href="skillnad-chatbot-och-ai-assistent.html" class="dropdown-item">Vilken passar dig?</a>
+                            </div>
+                        </div>
+                        <div class="nav-dropdown">
+                            <a href="aeo-optimering.html" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dd-aeo">AEO & Synlighet</a>
+                            <div id="nav-dd-aeo" class="dropdown-menu">
+                                <a href="aeo-optimering.html" class="dropdown-item">AEO-optimering</a>
+                                <a href="aeo-optimering.html#hur" class="dropdown-item">Bli synlig i AI-sökningar</a>
+                                <a href="aeo-optimering.html#hur" class="dropdown-item">Skillnad mot SEO</a>
+                            </div>
+                        </div>
+                        <div class="nav-dropdown">
+                            <a href="#priser" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dd-pricing">Priser</a>
+                            <div id="nav-dd-pricing" class="dropdown-menu">
+                                <a href="/pris-ai-assistent-kundtjanst.html" class="dropdown-item">AI-hjälpen Nivå 1 - från 1 990 kr</a>
+                                <a href="/pris-ai-assistent-kundtjanst-bokning.html" class="dropdown-item">AI-hjälpen Nivå 2 - från 3 490 kr</a>
+                                <a href="aeo-optimering.html#paket" class="dropdown-item">AEO-optimering - från 2 900 kr</a>
+                                <a href="pris-ai-partner.html" class="dropdown-item">Rådgivning & konsultation</a>
+                            </div>
+                        </div>
+                        <a href="vanliga-fragor.html" class="nav-link">Support & FAQ</a>
+                        <a href="#kontakt" class="nav-link">Kontakt</a>
+                        <a href="#kontakt" class="demo-btn">
+                            Kom igång
+                        </a>
+                    </nav>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="menu-toggle" aria-label="Öppna navigationsmeny" aria-expanded="false">
+                        <span class="hamburger">☰</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div class="mobile-menu">
+                    <div class="mobile-menu-header">
+
+                        <img src="/ai-hjalpen-logo.svg" alt="AI-hjälpen logotyp" class="mobile-logo" loading="lazy" sizes="(max-width: 768px) 100px, 120px">
+                        <button class="mobile-menu-close" aria-label="Stäng meny">&times;</button>
+                    </div>
+                    <nav class="mobile-nav" role="navigation" aria-label="Huvudmeny (mobil)">
+                        <a href="/om-oss.html" class="mobile-nav-link">Om AI-hjälpen</a>
+
+                        <!-- AI-assistenter -->
+                        <div class="mobile-acc">
+                            <button class="mobile-acc-trigger" type="button"
+                                    aria-expanded="false" aria-controls="macc-assistenter">
+                                AI-assistenter <span class="mobile-acc-caret" aria-hidden="true">▾</span>
+                            </button>
+                            <div id="macc-assistenter" class="mobile-acc-panel" hidden>
+                                <a href="/ai-assistent-kundtjanst.html" class="mobile-nav-sublink">AI-hjälpen Nivå 1</a>
+                                <a href="/ai-assistent-kundtjanst-bokning.html" class="mobile-nav-sublink">AI-hjälpen Nivå 2</a>
+                                <a href="/ai-assistenter.html" class="mobile-nav-sublink">Jämför lösningar</a>
+                                <a href="/skillnad-chatbot-och-ai-assistent.html" class="mobile-nav-sublink">Vilken passar dig?</a>
+                            </div>
+                        </div>
+
+                        <!-- AEO-optimering -->
+                        <div class="mobile-acc">
+                            <button class="mobile-acc-trigger" type="button"
+                                    aria-expanded="false" aria-controls="macc-aeo">
+                                AEO-optimering <span class="mobile-acc-caret" aria-hidden="true">▾</span>
+                            </button>
+                            <div id="macc-aeo" class="mobile-acc-panel" hidden>
+                                <a href="/aeo-optimering.html" class="mobile-nav-sublink">AEO-optimering</a>
+                                <a href="aeo-optimering.html#varfor" class="mobile-nav-sublink">Bli synlig i AI-sökningar</a>
+                                <a href="aeo-optimering.html#hur" class="mobile-nav-sublink">Skillnad mot SEO</a>
+                            </div>
+                        </div>
+
+                        <!-- Priser -->
+                        <div class="mobile-acc">
+                            <button class="mobile-acc-trigger" type="button"
+                                    aria-expanded="false" aria-controls="macc-priser">
+                                Priser <span class="mobile-acc-caret" aria-hidden="true">▾</span>
+                            </button>
+                            <div id="macc-priser" class="mobile-acc-panel" hidden>
+                                <a href="/pris-ai-assistent-kundtjanst.html" class="mobile-nav-sublink">AI-hjälpen Nivå 1 – från 1 990 kr</a>
+                                <a href="/pris-ai-assistent-kundtjanst-bokning.html" class="mobile-nav-sublink">AI-hjälpen Nivå 2 – från 3 490 kr</a>
+                                <a href="/aeo-optimering.html#paket" class="mobile-nav-sublink">AEO-optimering – från 2 900 kr</a>
+                                <a href="/pris-ai-partner.html" class="mobile-nav-sublink">Rådgivning & konsultation</a>
+                            </div>
+                        </div>
+
+                        <a href="/vanliga-fragor.html" class="mobile-nav-link">Support & FAQ</a>
+                        <a href="/#kontakt" class="mobile-nav-link">Kontakt</a>
+
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">AI-assistent som svarar, bokar och guidar – utan krångel</h1>
+                        <p class="hero-subtitle">
+                            Skräddarsydd AI-hjälp som automatiserar kundtjänst, frigör tid och ger snabbare svar – dygnet runt.
+                        </p>
+
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#kontakt" class="btn btn-primary">
+                                Kom igång enkelt
+                            </a>
+                        </div>
+                        <div class="hero-sublink">
+                            <a href="aeo-optimering.html" class="sublink-modern">
+                            Eller utforska AEO-optimering för AI-synlighet
+                            </a>
+                        </div>
+                        <p
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="vad-ar-aihjalpen" class="section section-gray video-section">
+            <!-- Video background -->
+            <div class="video-bg" aria-hidden="true">
+                <video autoplay muted loop playsinline preload="metadata" role="presentation"
+                       poster="/attached_assets/Video/aihjalpen-bg-poster.webp">
+                    <source src="/attached_assets/Video/aihjalpen-bg-hd.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+
+            <!-- Befintligt sektion-innehåll -->
+            <div class="video-content">
+                <div class="container">
+                    <h2 class="section-title">
+                        <img src="/kreatum-ikon.svg" alt="Kreatum ikon" class="section-icon" loading="lazy">
+                        Vad är AI-hjälpen?
+                    </h2>
+                    <div class="content">
+                        <p class="text-large">
+                            AI-hjälpen gör din hemsida smartare genom att integrera en digital assistent som tar emot besökare, svarar direkt och hjälper till med bokningar, frågor och kundkontakt.
+
+                        </p>
+                        <p class="text-large">
+            Vi hjälper svenska företag och organisationer i digitaliseringsresan. Vi bygger digitala medarbetare som känns personliga, pratar ert språk och jobbar dygnet runt utan att du behöver koda, installera eller hålla på med teknik.
+        </p>
+        <p class="text-large">
+            Istället för att låta besökare leta i FAQ-sidor eller vänta på svar kan din AI-assistent svara automatiskt på vanliga frågor, guida kunder till rätt information och till och med boka möten direkt på hemsidan. Detta skapar en smidig digital kundservice som fungerar även när du inte är tillgänglig.
+        </p>
+        <p class="text-large">
+            Våra AI-tjänster är speciellt anpassade för svenska småföretag och organisationer över hela landet som vill automatisera kundtjänst utan komplicerade chatbot-system. Genom att använda smart AI-teknik kan vi skapa en personlig upplevelse som förstår kundens behov och reagerar på ett naturligt sätt.
+        </p>
+        <p class="text-large">
+            Oavsett om du driver klinik i Umeå, byrå i Stockholm eller förening i Malmö hjälper AI-hjälpen dig att:
+        </p>
+                        <ul class="benefits-list">
+                            <li>Spara tid</li>
+                            <li>Få fler kunder</li>
+                            <li>Förbättra kundupplevelsen</li>
+                        </ul>
+                        <p class="text-large">
+                            AI-hjälpen är det moderna alternativet till traditionella FAQ-bottar och statiska hjälpsidor. Genom att automatisera kundtjänst och förbättra kundupplevelsen hjälper vi verksamheter att frigöra tid för det som verkligen spelar roll – att fokusera på kärnan i sin verksamhet medan AI:n tar hand om första intrycket och grundläggande kundsupport.
+                            </p>
+                            <p class="text-large">
+                            Förutom AI-assistenter erbjuder vi även <a href="aeo-optimering.html" style="color: #ff6b47; text-decoration: none; font-weight: 600;">AEO-optimering</a> – så att ditt innehåll blir synligt när kunder frågar AI-tjänster som Bing AI, Google Gemini eller ChatGPT om din bransch.
+                            </p>
+                            <p class="text-large">
+AI-hjälpen är en digital tjänst som kombinerar automatisering och AI för att förenkla vardagen för företag och organisationer. Vår lösning är framtagen för dig som vill påbörja eller fördjupa din digitalisering – utan teknisk kunskap.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <!-- Services Section -->
+            <section id="tjanster" class="section section-gray">
+                <div class="container">
+                    <h2 class="section-title">Våra tjänster</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <h3 class="service-title">Varför AI-hjälpen?</h3>
+                            <p class="service-description">
+                                Möt framtidens kunddialog – utan krångel. Vi bygger smarta lösningar som fungerar direkt.
+                            </p>
+                            <a href="varfor-valja-ai-hjalpen.html" class="service-btn">
+                                Läs mer <span class="sr-only">om varför välja AI-hjälpen</span>
+                            </a>
+                        </div>
+                        <div class="service-card">
+                            <h3 class="service-title">AI-hjälpen Nivå 1</h3>
+                            <p class="service-description">
+                                AI-assistent för kundtjänst – svarar på frågor och guidar besökare online. Perfekt start för AI på hemsidan.
+                            </p>
+                            <a href="ai-assistent-kundtjanst.html" class="service-btn">
+                                Börja enkelt
+                            </a>
+                        </div>
+                        <div class="service-card">
+                            <h3 class="service-title">AI-hjälpen Nivå 2</h3>
+                            <p class="service-description">
+                                AI-assistent för kundtjänst & bokning – hanterar leads och mötesbokningar automatiskt. Din digitala kollega som konverterar besökare.
+                            </p>
+                            <a href="ai-assistent-kundtjanst-bokning.html" class="service-btn">
+                                Få fler leads
+                            </a>
+                        </div>
+                        <div class="service-card">
+                            <h3 class="service-title"><img src="images/icons/search.svg" alt="Sökoptimering" width="40" height="40" loading="lazy" decoding="async"> AEO-optimering – Bli svaret i AI-sökningar</h3>
+                            <p class="service-description">
+                                Gör ditt innehåll synligt för AI-assistenter som ChatGPT, Google AI och Bing. AEO hjälper dig att bli det svar kunderna ser först.
+                            </p>
+                            <a href="aeo-optimering.html" class="service-btn">
+                                Läs om AEO
+                            </a>
+                        </div>
+                        <div class="service-card">
+                            <h3 class="service-title">Vad är skillnaden?</h3>
+                            <p class="service-description">
+                
+                            </p>
+                            <a href="skillnad-chatbot-och-ai-assistent.html" class="service-btn">
+                                Läs mer <span class="sr-only">om skillnaden mellan chatbot och AI-assistent</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section id="funkar" class="section">
+                <div class="container">
+                    <h2 class="section-title">Så funkar det</h2>
+                    <div class="process-grid">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h3 class="step-title">Vi bygger</h3>
+                            <p class="step-description">Skräddarsydd AI för din verksamhet</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h3 class="step-title">Vi installerar</h3>
+                            <p class="step-description">Enkel integration med din hemsida</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h3 class="step-title">Kunden får hjälp</h3>
+                            <p class="step-description">Automatisk support dygnet runt</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h3 class="step-title">Du får leads</h3>
+                            <p class="step-description">Direktkoppling till din verksamhet</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section id="priser" class="section section-gray">
+                <div class="container">
+                    <div class="csp-assistenter-cta">
+                        <a href="ai-assistenter.html" class="csp-assistenter-link">Jämför våra AI-assistenter här</a> <!-- Uppdaterad länk -->
+                    </div>
+                    <h2 class="section-title">Välj rätt AI för er verksamhet</h2>
+                    <div class="pricing-grid">
+                        <div class="pricing-card" id="pris-digital-assistent">
+                            <h3 class="pricing-title">AI-hjälpen Nivå 1</h3>
+                            <div class="pricing-price">Från 1 990 kr<span class="pricing-period">/mån</span></div>
+                            <p class="pricing-description">AI-assistent för kundtjänst – svarar på frågor och guidar besökare online.</p>
+                            <ul class="pricing-features">
+                                <li>Automatisk kundtjänst</li>
+                                <li>Guidar besökare rätt</li>
+                                <li>Alltid tillgänglig</li>
+                            </ul>
+                            <a href="pris-ai-assistent-kundtjanst.html" class="btn btn-outline">
+                                Se vad som ingår
+                            </a>
+                        </div>
+
+                        <div class="pricing-card pricing-featured" id="pris-smart-ai-assistent">
+                            <div class="pricing-badge">Populärast</div>
+                            <h3 class="pricing-title">AI-hjälpen Nivå 2</h3>
+                            <div class="pricing-price">Från 3 490 kr<span class="pricing-period">/mån</span></div>
+                            <p class="pricing-description">AI-assistent för kundtjänst & bokning – hanterar leads och mötesbokningar automatiskt.</p>
+                            <ul class="pricing-features">
+                                <li>Automatisk kundtjänst</li>
+                                <li>Bokar möten automatiskt</li>
+                                <li>Kvalificerar leads</li>
+                            </ul>
+                            <a href="pris-ai-assistent-kundtjanst-bokning.html" class="btn btn-primary">
+                                Utforska paketet
+                            </a>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3 class="pricing-title">Partner – Din AI-rådgivare</h3>
+                            <div class="pricing-price">Få rådgivning</div>
+                            <p class="pricing-description">För dig som vill ta nästa steg med AI. Vi hjälper dig att förstå vad som är möjligt, vad som lönar sig – och vad du bör undvika.</p>
+                            <ul class="pricing-features">
+                                <li>Rådgivning & analys</li>
+                                <li>Verksamhetsanpassade förslag</li>
+                                <li>Ingen teknik, bara resultat</li>
+                            </ul>
+                            <a href="pris-ai-partner.html" class="btn btn-outline">
+                                Få rådgivning
+                            </a>
+                        </div>
+                    </div>
+                        <p class="csp-konrad-seo">
+                            AI-hjälpen använder en smart AI-assistent – som här kallas Konrad – för att guida besökare, svara på frågor och visa hur tjänsten fungerar.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Detail Modal -->
+            <div id="modal-overlay" class="pricing-modal-overlay">
+                <div class="pricing-modal-content">
+                    <button class="pricing-modal-close">&times;</button>
+                    <div id="pricing-modal-body">
+                        <!-- Content will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Contact Section -->
+            <section id="kontakt" class="section">
+                <div class="container">
+                    <h2 class="section-title">Kontakta oss</h2>
+                    <div class="contact-form-container">
+                        <form class="contact-form" aria-labelledby="kontakt" novalidate>
+                            <div class="form-group">
+                                <label for="contact-name" class="csp-sr-only">Namn</label>
+                                <input type="text" id="contact-name" placeholder="Namn" required class="form-input" autocomplete="name" maxlength="40" />
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email" class="csp-sr-only">E-post</label>
+                                <input type="email" id="contact-email" placeholder="E-post" required class="form-input" autocomplete="email" maxlength="254" inputmode="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone" class="csp-sr-only">Telefon</label>
+                                <input type="tel" id="contact-phone" placeholder="Telefon" class="form-input" autocomplete="tel" aria-label="Ditt telefonnummer (valfritt)" maxlength="20" />
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message" class="csp-sr-only">Meddelande</label>
+                                <textarea id="contact-message" placeholder="Meddelande" required rows="4" class="form-input form-textarea" maxlength="1000"></textarea>
+                            </div>
+                            <div id="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+                            <button type="submit" class="btn btn-primary btn-full" aria-describedby="form-help">
+                                Skicka meddelande
+                            </button>
+                            <p class="csp-gdpr-text">
+                                🛡️ Vi sparar bara de uppgifter du själv lämnar. <a href="/integritetspolicy.html" target="_blank" rel="noopener">Läs mer här</a>.
+                            </p>
+                            <div id="form-help" class="csp-sr-only">Formuläret skickas säkert och vi svarar inom 24 timmar</div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+
+
+
+        <!-- Service Modal -->
+        <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <button id="modal-close" class="modal-close">&times;</button>
+                <h2 id="modal-title" class="modal-title"></h2>
+                <p id="modal-description" class="modal-description"></p>
+                <div class="modal-image-container">
+                    <div class="modal-image-placeholder">
+            
+                    </div>
+                </div>
+                <ul id="modal-benefits-list" class="modal-benefits"></ul>
+                <div class="modal-action">
+                    <button id="modal-contact-btn" class="btn btn-primary">Kontakta oss</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+
+        <!-- Övriga scripts - låt dem behålla sin nuvarande position -->
+        <script src="/js/config.js" defer></script>
+        <script src="/js/utils.js" defer></script>
+        <script src="/js/modals.min.js" defer></script>
+
+        <script src="/js/scroll-to-contact.js" defer></script>
+    <!-- OBS: menu-toggle.js är borttaget - all mobilmeny-logik hanteras nu i main.js -->
+
+    <!-- === Chat stack: standardiserad ordning (MÅSTE BEHÅLLAS) === -->
+    <!-- 1) chat.js: definierar globala helper-funktioner som main.js använder -->
+    <script src="/js/chat.min.js" defer></script>
+
+    <!-- 2) gdpr.js: sätter policy/gating innan UI skapas -->
+    <script src="/js/gdpr.min.js" defer></script>
+
+    <!-- 3) konrad.js: skapar floating-knapp + helper APIs -->
+    <script src="/js/konrad.js" defer></script>
+
+    <!-- 4) konrad-feedback.js: tummen upp/ner feedback för Konrad-svar -->
+    <script src="/js/konrad-feedback.js" defer></script>
+
+    <!-- 5) footer-loader.js: injicerar konrad-modal i DOM (+ dispatch 'konrad:modal-injected') -->
+    <script src="/js/footer-loader.js" defer></script>
+
+    <!-- 5) main.js: WIRAR events och knappar, ALLTID sist -->
+    <script src="/js/main.min.js" defer></script>
+    <!-- === /Chat stack === -->
+
+    <!-- Caret upgrade för modern dropdown-pilar -->
+    <script src="/js/caret-upgrade.js" defer></script>
+
+    <!-- WCAG 2.1 AA Tangentbordsnavigering -->
+    <script src="/js/wcag-keyboard-a11y.js" defer></script>
+
+</body>
+</html>

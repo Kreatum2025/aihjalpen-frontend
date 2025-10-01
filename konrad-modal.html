@@ -1,0 +1,48 @@
+
+<!-- Professionell Konrad Chat Modal -->
+<div id="konrad-modal" class="konrad-modal-overlay hidden" role="dialog" aria-labelledby="konrad-chat-title" aria-modal="true" aria-hidden="true">
+    <div class="konrad-chat-container">
+        <!-- Chat Header -->
+        <div class="konrad-chat-header">
+            <div class="konrad-header-info">
+                <div class="konrad-avatar-wrapper avatar-wrapper">
+                    <img src="/konrad-logo.webp" alt="Konrad AI-assistent avatar" class="konrad-avatar avatar" loading="lazy" sizes="48px">
+                    <span class="konrad-status-dot status-dot online" aria-hidden="true"></span>
+                </div>
+                <div class="konrad-info">
+                    <h4 id="konrad-chat-title" class="konrad-name">Konrad</h4>
+                    <span class="konrad-status" aria-live="polite">Online</span>
+                </div>
+            </div>
+            <button class="konrad-close-btn" aria-label="Stäng chat" tabindex="0">&times;</button>
+        </div>
+
+        <!-- Chat Messages -->
+        <div id="konrad-chat-messages" class="konrad-chat-messages" role="log" aria-label="Chathistorik"></div>
+
+        <!-- Chat Input -->
+        <div class="konrad-chat-input">
+            <div class="chat-input-wrapper">
+                <div class="konrad-input-container">
+                    <textarea
+                        id="konrad-input"
+                        placeholder="Skriv ditt meddelande här..."
+                        rows="1"
+                        class="konrad-textarea"
+                        aria-label="Skriv ditt meddelande till Konrad"
+                        aria-describedby="chat-disclaimer"
+                    ></textarea>
+                    <button id="konrad-send-button" class="konrad-send-btn" aria-label="Skicka meddelande" tabindex="0">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m3 3 3 9-3 9 19-9Z" />
+                            <path d="m6 12 13 0" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="chat-disclaimer" class="chat-disclaimer">
+                    Genom att skriva godkänner du vår <a href="#" id="gdpr-link-in-chat" aria-label="Läs vår integritetspolicy">integritetspolicy</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

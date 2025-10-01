@@ -1,0 +1,134 @@
+/* Styling för AEO-specifika element */
+.aeo-section {
+    padding: 6rem 0;
+    text-align: center;
+    color: var(--color-text-dark);
+}
+
+
+
+/* Removed AEO-specific hero styles - now using main.css hero implementation */
+
+/* Sektion för processbeskrivning */
+.aeo-process {
+    background-color: var(--color-background-light);
+    padding: 6rem 0;
+}
+
+.aeo-process-header {
+    margin-bottom: 4rem;
+}
+
+.aeo-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolumner som standard */
+    gap: 3rem;
+    align-items: start; /* Justerar elementen i toppen av sina celler */
+}
+
+.aeo-process-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrerar innehållet i varje item */
+}
+
+.aeo-process-item img {
+    max-width: 100px; /* Justera storleken efter behov */
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+/* Sektion för fördelar */
+.aeo-benefits {
+    padding: 6rem 0;
+}
+
+.aeo-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolumner som standard */
+    gap: 2.5rem;
+    text-align: left;
+}
+
+.aeo-benefits-item {
+    display: flex;
+    align-items: flex-start; /* Justerar ikonen och texten i toppen */
+    gap: 1rem; /* Avstånd mellan ikon och text */
+}
+
+.aeo-benefits-item img {
+    flex-shrink: 0; /* Förhindrar att ikonen krymper */
+    width: 32px; /* Storlek på ikoner */
+    height: 32px;
+}
+
+/* Sektion för kontaktformulär */
+.aeo-contact {
+    background-color: var(--color-background-light);
+    padding: 6rem 0;
+}
+
+.aeo-contact-content {
+    max-width: 600px; /* Begränsar bredden på innehållet */
+    margin: 0 auto; /* Centrerar innehållet */
+    text-align: center;
+}
+
+.aeo-contact-form input,
+.aeo-contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border); /* Använder variabel för kantfärg */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.aeo-contact-form textarea {
+    min-height: 150px; /* Ger textarea mer höjd */
+    resize: vertical; /* Tillåter vertikal ändring av storlek */
+}
+
+.aeo-contact-form button {
+    background-color: var(--color-primary); /* Använder variabel för primärfärg */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Mjuk övergång för hover-effekt */
+}
+
+.aeo-contact-form button:hover {
+    background-color: var(--color-primary-dark); /* Mörkare färg vid hover */
+}
+
+/* Footer styling */
+.aeo-footer {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: var(--color-footer-bg); /* Använder variabel för bakgrundsfärg */
+    color: var(--color-footer-text); /* Använder variabel för textfärg */
+}
+
+/* Responsive adjustments för AEO-specifika element */
+@media (max-width: 768px) {
+    .aeo-process-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .aeo-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Säkerställ transparent bakgrund - ingen gradient override */
+.aeo-hero.hero { 
+    background: transparent !important;
+}
+
+/* AEO-sidan använder nu samma hero-implementation som startsidan */

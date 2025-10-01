@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidan kunde inte hittas – AI-hjälpen</title>
+  <meta name="robots" content="noindex">
+  
+  <!-- Google Tag (prod-guarded) -->
+<script>
+  (function () {
+    var host = location.hostname;
+    var isProd = host === 'aihjalpen.se' || host === 'www.aihjalpen.se';
+    var isLocal = host === 'localhost' || host.endsWith('.local');
+    var isAzure = host.endsWith('.azurestaticapps.net');
+    if (!(isProd || isLocal || isAzure)) return; // blockera spårning utanför prod/dev/azure
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+
+    // Consent Mode (grundinställning)
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'granted',
+      wait_for_update: 500
+    });
+
+    // Ladda Google Tag
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=GT-K5Q7RD3K';
+    document.head.appendChild(s);
+
+    gtag('js', new Date());
+    gtag('config', 'GT-K5Q7RD3K');
+  })();
+</script>
+  
+  <link rel="stylesheet" href="/main.min.css">
+  <style>
+    .page-404 {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fdf8f2 0%, #ffffff 100%);
+    }
+    
+    .main-404 {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .title-404 { 
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 700;
+      color: #1a2a3c;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .text-404 {
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      color: #4a5568;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      line-height: 1.5;
+    }
+    
+    .link-404 { 
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #ff6b47 0%, #ff5733 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 107, 71, 0.3);
+    }
+    
+    .link-404:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 71, 0.4);
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .main-404 {
+        padding: 1.5rem;
+      }
+      
+      .title-404 {
+        margin-bottom: 0.75rem;
+      }
+      
+      .text-404 {
+        margin-bottom: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-404">
+    <main class="main-404">
+      <h1 class="title-404">Oops! Den sidan finns inte 😅</h1>
+      <p class="text-404">Vi kunde inte hitta sidan du letade efter.</p>
+      <a href="/" class="link-404">Gå tillbaka till startsidan</a>
+    </main>
+  </div>
+
+  <script src="/js/404-redirect.js" defer></script>
+  
+</body>
+</html>
