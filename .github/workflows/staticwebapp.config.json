@@ -1,0 +1,26 @@
+{
+  "routes": [
+    {
+      "route": "/v1/*",
+      "rewrite": "https://ai-hjalpen-backend.replit.app/v1/{path}"
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html",
+      "statusCode": 404
+    }
+  },
+  "globalHeaders": {
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "geolocation=(), microphone=(), camera=()",
+    "Cache-Control": "public, max-age=0, must-revalidate"
+  },
+  "mimeTypes": {
+    ".avif": "image/avif",
+    ".webp": "image/webp"
+  }
+}
