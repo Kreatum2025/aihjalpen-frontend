@@ -22,5 +22,6 @@
   "mimeTypes": {
     ".avif": "image/avif",
     ".webp": "image/webp"
+    ".svg": "image/svg+xml"
   }
 }
